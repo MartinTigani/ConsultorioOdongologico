@@ -23,23 +23,23 @@ public class Turno implements Serializable {
     private int idTurno;
     
     @Temporal(TemporalType.DATE)
-    private Date fechaTutno;
+    private Date fechaTurno;
     private String horaTurno;
     
     @ManyToOne
-    @JoinColumn(name="id_turno")
+    @JoinColumn(name="id_odonto")
     private Odontologo odonto;
     
     @ManyToOne
-    @JoinColumn(name="id_Turno2")
+    @JoinColumn(name="id_pacien")
     private Paciente pacien;
 
     public Turno() {
     }
 
-    public Turno(int idTurno, Date fechaTutno, String horaTurno) {
+    public Turno(int idTurno, Date fechaTurno, String horaTurno) {
         this.idTurno = idTurno;
-        this.fechaTutno = fechaTutno;
+        this.fechaTurno = fechaTurno;
         this.horaTurno = horaTurno;
     }
 
@@ -52,11 +52,11 @@ public class Turno implements Serializable {
     }
 
     public Date getFechaTutno() {
-        return fechaTutno;
+        return fechaTurno;
     }
 
     public void setFechaTutno(Date fechaTutno) {
-        this.fechaTutno = fechaTutno;
+        this.fechaTurno = fechaTutno;
     }
 
     public String getHoraTurno() {
